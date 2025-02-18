@@ -190,7 +190,16 @@ img {
 .services__item {
     width: calc((100% - 72px) / 4);
     }
-
+.services-svglist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+}
 .services__subtitle {font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
