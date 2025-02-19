@@ -80,13 +80,28 @@ img {
     color: #2e2f42;
     padding: 24px 0;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.menu__link:hover {
-    color: #404bbf;}
-.menu__link:focus {
-    color: #404bbf;
+.menu__link.curent{
+    position: relative;
 }
+
+.menu__link.curent::before{
+    content:'' ;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color: #404bbf;
+}
+
+.menu__link.curent,
+.menu__link:focus,
+.menu__link:hover {
+    color: #404bbf;} 
+   
 .header__contact {font-style: normal;
     margin-left: auto;
 }
@@ -243,6 +258,7 @@ text-transform: capitalize;
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     }
 
 .team__photo {}
@@ -269,9 +285,34 @@ text-transform: capitalize;
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
+    margin-bottom: 8px;
     /* padding-right: 52px;
     padding-left: 52px; */
 }
+.team-bloklist {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.team-bloklist-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-bloklist-box:hover,
+.team-bloklist-box:focus{
+    background-color: #404bbf;;
+}
+
+.team-list-image {}
 /* < !-- Portfolio --> */
 .portfolio {
     padding: 120px 0;
@@ -293,9 +334,17 @@ text-transform: capitalize;
         column-gap: 24px;
         row-gap: 48px;
 }
+.portfolio__item:hover,
+.portfolio__item:focus{box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    
+
+}
+
 
 .portfolio__item {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     }
 .prtfolio_tumba {
 position: relative;
@@ -315,7 +364,7 @@ overflow: hidden;
     width: 100%;
     height: 100%;
     transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .prtfolio_tumba:hover .overlay {
     transform: translateY(0);
@@ -326,8 +375,8 @@ overflow: hidden;
 .portfolio__image {}
 .portfolio-card-content{
     padding: 32px 16px;
-        border: 1px solid #e7e9fc;
-        border-top: none;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
 .portfolio__name {
     font-weight: 500;
@@ -347,6 +396,12 @@ overflow: hidden;
 .footer {
     padding: 100px 0;
     background-color:#2e2f42;
+}
+.footer-bot{
+    display: flex;
+}
+.footer-logobox{
+    margin-right: 120px;
 }
 .footer__logo{
     font-family: "Raleway", sans-serif;
@@ -377,4 +432,32 @@ overflow: hidden;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+}
+.foter-para{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+.footer-bloklist{
+display: flex;
+gap: 16px;
+
+}
+.footer-list {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-list:hover,
+.footer-list:focus {
+    background-color: #31d0aa;
 }
