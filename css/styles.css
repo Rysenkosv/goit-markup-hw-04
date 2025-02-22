@@ -241,7 +241,6 @@ img {
 
 /* Team main */
 
-
 .team {
     background-color: #F4F4FD;
     padding: 120px 0;
@@ -270,10 +269,15 @@ img {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.team__photo {}
+.team__member:first-child {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+}
 
 .team-contr {
-    padding: 32px 0px;
+    padding: 32px 0;
 }
 
 .team__name {
@@ -283,8 +287,6 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    /* padding-right: 49px;
-    padding-left: 49px; */
     margin-bottom: 8px;
 }
 
@@ -296,8 +298,6 @@ img {
     text-align: center;
     color: #434455;
     margin-bottom: 8px;
-    /* padding-right: 52px;
-    padding-left: 52px; */
 }
 
 .team-bloklist {
@@ -305,7 +305,6 @@ img {
     gap: 24px;
     align-items: center;
     justify-content: center;
-
 }
 
 .team-bloklist-box {
@@ -324,7 +323,27 @@ img {
     background-color: #404bbf;
 }
 
-.team-list-image {}
+.team-bloklist-box a {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color, #4d5ae5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-bloklist-box a:hover,
+.team-bloklist-box a:focus {
+    background-color: #404bbf;
+}
+
+.team-bloklist-box svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--secondary-color, #f4f4fd);
+}
 /* < !-- Portfolio --> */
 .portfolio {
     padding: 120px 0;
